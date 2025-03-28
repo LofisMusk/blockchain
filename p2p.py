@@ -202,7 +202,7 @@ class ProofOfStakeBlockchain:
 ################################################################################
 
 class Node:
-    def __init__(self, host="127.0.0.1", port=5000, api_port=8000):
+    def __init__(self, host="mekambe.ddns.net", port=5000, api_port=8000):
         self.host = host
         self.port = port
         self.api_host = host

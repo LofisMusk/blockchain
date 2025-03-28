@@ -51,7 +51,7 @@ class ChainConnector:
     """
     Łączy się z węzłem, który nasłuchuje na /balance, /transaction, /stake, /faucet.
     """
-    def __init__(self, base_url="http://127.0.0.1:8000"):
+    def __init__(self, base_url="http://mekambe.ddns.net:8000"):
         self.base_url = base_url.rstrip("/")
 
     def get_balance(self, address):
@@ -112,7 +112,7 @@ class ChainConnector:
 class WalletGUI:
     def __init__(self):
         # Zawsze tryb online
-        self.blockchain = ChainConnector("http://127.0.0.1:8000")
+        self.blockchain = ChainConnector("http://mekambe.ddns.net:8000")
 
         self.wallet = Wallet()  # Generujemy portfel przy starcie
 

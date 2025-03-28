@@ -192,9 +192,9 @@ class WalletGUI:
     def refresh_balance(self):
         addr = self.wallet.get_address()
         balance = self.blockchain.get_balance(addr)
-        stake = self.blockchain.get_stake(addr)  # w get_stake() łączymy się do /stake_info
+      #  stake = self.blockchain.get_stake(addr)  # w get_stake() łączymy się do /stake_info
         self.label_balance.config(text=f"Saldo: {balance}")
-        self.label_stake.config(text=f"Stake: {stake}")
+       # self.label_stake.config(text=f"Stake: {stake}")
 
     def send_tokens(self):
         addr_from = self.wallet.get_address()

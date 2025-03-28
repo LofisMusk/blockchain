@@ -60,13 +60,13 @@ class ChainConnector:
         data = resp.json()
         return data.get("balance", 0)
 
-    def get_stake(self, address):
-        # Zakładamy, że węzeł obsługuje /stake_info?address=...
-        # Jeśli tego nie ma, możesz zwracać 0 albo dodać endpoint
-        url = f"{self.base_url}/stake_info?address={address}"
-        resp = requests.get(url)
-        data = resp.json()
-        return data.get("stake", 0)
+   # def get_stake(self, address):
+   #     # Zakładamy, że węzeł obsługuje /stake_info?address=...
+   #     # Jeśli tego nie ma, możesz zwracać 0 albo dodać endpoint
+   #     url = f"{self.base_url}/stake_info?address={address}"
+   #     resp = requests.get(url)
+   #     data = resp.json()
+   #     return data.get("stake", 0)
 
     def send_transaction(self, from_address, to_address, amount):
         # W realnym systemie transakcja powinna być podpisywana kluczem prywatnym
